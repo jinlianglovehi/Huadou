@@ -10,7 +10,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Gentallela Alela! | </title>
+  <title>华豆科技</title>
 
   <!-- Bootstrap core CSS -->
 
@@ -53,7 +53,7 @@
 
 <!--左侧的的菜单的信息 -->
           <div class="navbar nav_title" style="border: 0;">
-            <a href="index.jsp" class="site_title"><i class="fa fa-paw"></i> <span>Gentellela Alela!</span></a>
+            <a href="index.jsp" class="site_title"><i class="fa fa-paw"></i> <span>华豆科技</span></a>
           </div>
           <div class="clearfix"></div>
 
@@ -63,7 +63,7 @@
               <img src="assets/bootstrap/images/img.jpg" alt="..." class="img-circle profile_img">
             </div>
             <div class="profile_info">
-              <span>Welcome,</span>
+              <span>Welcome</span>
               <h2>${huhu.huhuName}</h2>
             </div>
           </div>

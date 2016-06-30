@@ -3,4 +3,7 @@
   <data-source name="aliyunu" uuid="f55e00ea-4b6f-42ff-8e78-d91410a278df">
     <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
   </data-source>
+  <data-source name="MySQL - huadou@localhost" uuid="4ea595db-e72f-4409-9e52-46b4bc8aa424">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
 </component>
