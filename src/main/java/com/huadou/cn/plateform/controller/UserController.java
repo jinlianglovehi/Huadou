@@ -20,7 +20,7 @@ import java.util.List;
 
 
 /**
- *   信息模块
+ *   用户信息管理Controller
  */
 
 @Controller
@@ -97,6 +97,18 @@ public class UserController {
 		return  result ;
 
 	}
+
+	// ##################### 管理用户界面Controller ##########################
+
+	@RequestMapping(value = "/login",method = RequestMethod.POST)
+	public String loginAction(@ModelAttribute("user") User user ){
+
+
+
+		return "index";
+
+	}
+
 
 
 }

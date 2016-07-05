@@ -5,19 +5,19 @@
   Time: 下午9:42
   To change this template use File | Settings | File Templates.
 --%>
-<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-<link href="assets/bootstrap/fonts/css/font-awesome.min.css" rel="stylesheet">
-<link href="assets/bootstrap/css/animate.min.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/assets/bootstrap/fonts/css/font-awesome.min.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/assets/bootstrap/css/animate.min.css" rel="stylesheet">
 
 <!-- Custom styling plus plugins -->
-<link href="assets/bootstrap/css/custom.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/maps/jquery-jvectormap-2.0.3.css" />
-<link href="assets/bootstrap/css/icheck/flat/green.css" rel="stylesheet" />
-<link href="assets/bootstrap/css/floatexamples.css" rel="stylesheet" type="text/css" />
+<link href="${pageContext.request.contextPath}/assets/bootstrap/css/custom.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/bootstrap/css/maps/jquery-jvectormap-2.0.3.css" />
+<link href="${pageContext.request.contextPath}/assets/bootstrap/css/icheck/flat/green.css" rel="stylesheet" />
+<link href="${pageContext.request.contextPath}/assets/bootstrap/css/floatexamples.css" rel="stylesheet" type="text/css" />
 
-<script src="assets/bootstrap/js/jquery.min.js"></script>
-<script src="assets/bootstrap/js/nprogress.js"></script>
+<script src="${pageContext.request.contextPath}/assets/bootstrap/js/jquery.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/bootstrap/js/nprogress.js"></script>
 
 <!--[if lt IE 9]>
 <script src="../assets/js/ie8-responsive-file-warning.js"></script>

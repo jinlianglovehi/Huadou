@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: jinliang
-  Date: 16/7/5
-  Time: 上午7:06
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -12,7 +5,6 @@
     <jsp:include page="WEB-INF/head_simple.jsp"/>
 </head>
 <body>
-
 <div class="">
     <a class="hiddenanchor" id="toregister"></a>
     <a class="hiddenanchor" id="tologin"></a>
@@ -20,7 +12,7 @@
     <div id="wrapper">
         <div id="login" class="animate form " style="float: right">
             <section class="login_content">
-                <form>
+                <form action="user/login.do" method="post">
                     <h1> Login </h1>
                     <div>
                         <input type="text" class="form-control" placeholder="Username" required="" />
@@ -28,13 +20,16 @@
                     <div>
                         <input type="password" class="form-control" placeholder="Password" required="" />
                     </div>
-                    <div class="row">
+                    <div class="row ">
                         <%--<a class="reset_pass text-left" href="#">忘记密码?</a>--%>
                         <%--<a class="to_register" href="#">创建用户</a>--%>
                         <%--<a class="btn btn-default submit  text-right" href="index.html">登陆</a>--%>
-                            <div class="col-sm-3  text-center"><a class="btn btn-sm" href="#">忘记密码?</a></div>
-                            <div class="col-sm-3 text-center"><a  class="btn btn-sm" href="#">创建用户</a></div>
-                            <div class="col-sm-offset-9"><a class=" btn btn-sm submit " href="index.html">登陆</a></div>
+                            <%--<div class="col-sm-3  text-center"><a class="btn btn-sm" href="#">忘记密码?</a></div>--%>
+                            <%--<div class="col-sm-3 text-center"><a  class="btn btn-sm" href="#">创建用户</a></div>--%>
+
+                            <button type="button" class="btn btn-link" style="float: left">忘记密码?</button>
+                            <button type="button" class="btn btn-link" style="float: left">创建用户</button>
+                            <input class="btn btn-default" style="float: right" type="submit" value="提交">
                     </div>
                     <div class="clearfix"></div>
                     <div class="separator">
