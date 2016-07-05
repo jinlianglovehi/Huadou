@@ -112,7 +112,7 @@
 
   <!--开始的欢迎界面-->
   <welcome-file-list>
-    <welcome-file>second.jsp</welcome-file>
+    <welcome-file>login.jsp</welcome-file>
     <welcome-file>/WEB-INF/jsp/second.jsp</welcome-file>
   </welcome-file-list>
   <!-- 配置SESSION超时，单位是分钟 -->

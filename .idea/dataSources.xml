@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2369840248">
-    <data-source source="LOCAL" name="aliyunu" uuid="f55e00ea-4b6f-42ff-8e78-d91410a278df">
+  <component name="DataSourceManagerImpl" format="xml" hash="2282831601">
+    <data-source source="LOCAL" name="MySQL - huadou@localhost" uuid="4ea595db-e72f-4409-9e52-46b4bc8aa424">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://112.74.83.167:3306</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/huadou</jdbc-url>
       <driver-properties>
         <property name="zeroDateTimeBehavior" value="convertToNull" />
         <property name="tinyInt1isBit" value="false" />
@@ -14,11 +14,11 @@
         <property name="yearIsDateType" value="false" />
       </driver-properties>
     </data-source>
-    <data-source source="LOCAL" name="MySQL - huadou@localhost" uuid="4ea595db-e72f-4409-9e52-46b4bc8aa424">
+    <data-source source="LOCAL" name="MySQL - huadou@112.74.83.167" uuid="f0ce3e14-c94f-47e7-b763-3a2194eb9b62">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/huadou</jdbc-url>
+      <jdbc-url>jdbc:mysql://112.74.83.167:3306/huadou</jdbc-url>
       <driver-properties>
         <property name="zeroDateTimeBehavior" value="convertToNull" />
         <property name="tinyInt1isBit" value="false" />

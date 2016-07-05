@@ -1,9 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source name="aliyunu" uuid="f55e00ea-4b6f-42ff-8e78-d91410a278df">
-    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
-  </data-source>
   <data-source name="MySQL - huadou@localhost" uuid="4ea595db-e72f-4409-9e52-46b4bc8aa424">
     <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="MySQL - huadou@112.74.83.167" uuid="f0ce3e14-c94f-47e7-b763-3a2194eb9b62">
+    <database-info product="MySQL" version="5.6.31" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.4">
+      <schema id="1" name="huadou"/>
+      <table id="2" parent="1" name="user_info"/>
+      <column id="3" parent="2" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="4" parent="2" name="username">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="5" parent="2" name="password">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="6" parent="2" name="age">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="7" parent="2" name="phonenumber">
+        <data-type>varchar(25)</data-type>
+      </column>
+      <column id="8" parent="2" name="create_data">
+        <data-type>date</data-type>
+      </column>
+      <column id="9" parent="2" name="update_data">
+        <data-type>date</data-type>
+      </column>
+      <key id="10" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
   </data-source>
 </component>

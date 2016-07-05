@@ -4,14 +4,19 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
+import com.huadou.cn.plateform.dao.UserInfoMapper;
 import com.huadou.cn.plateform.pojo.RequestBean;
 import com.huadou.cn.plateform.pojo.User;
 import com.huadou.cn.plateform.service.IUserService;
+import com.huadou.cn.utils.GsonUtils;
+import org.springframework.beans.propertyeditors.StringArrayPropertyEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 
 /**
@@ -26,6 +31,8 @@ public class UserController {
 
 	@Resource
 	private IUserService userService;
+	@Resource
+	private UserInfoMapper userInfoMapper;
 	@RequestMapping("/showUser/{id}")
 	public String addData(HttpServletRequest request,Model model,@PathVariable( "id" ) int id){
 
@@ -80,4 +87,16 @@ public class UserController {
 
 		return  "huhu";
 	}
+
+
+	@ResponseBody
+	@RequestMapping(value = "getUserInfo",method = RequestMethod.GET)
+	public String getUserInfo(){
+	    List<User> list =	userInfoMapper.getUser();
+		String result = GsonUtils.getInstance().toJson(list);
+		return  result ;
+
+	}
+
+
 }
