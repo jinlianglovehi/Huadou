@@ -29,11 +29,15 @@ public class MenuItemController {
     @RequestMapping(value = "/getmenus/{userId}",method = RequestMethod.GET)
     public String getMenuItems(@PathVariable( "userId" ) String userId,ModelMap model){
 
-       List<MenuItem>  menuItems = menuItemMapper.getMenuItemsByUserId(userId);
+
+        if(Utils.isDebug){
+            System.out.println("[16/7/10 下午4:02]getMenuItems,userId:"+userId);
+        }
+
+       List<MenuItem>  menuItems = menuItemMapper.getMainsMenuItemsByUserId(userId);
        if(Utils.isDebug){
            System.out.println("getMenuItems:"+ menuItems.size());
        }
-
         model.put("menuitems",menuItems);
         return  "index" ;
 

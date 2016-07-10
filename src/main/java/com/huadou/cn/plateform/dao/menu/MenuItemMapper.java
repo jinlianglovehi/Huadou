@@ -23,13 +23,13 @@ public interface MenuItemMapper {
      * @param userId
      * @return
      */
-    @Select("select * from menu_item  where userId =#{userId}")
+    @Select("select * from menu_item  where menuType =1 and  userId =#{userId} ")
     @Results({
            @Result(property = "childMenus",column = "id",
-             many = @Many(select = "com.huadou.cn.plateform.dao.menu.MenuItemMapper.getMenuItemsByParentId")
+             many = @Many(select = "com.huadou.cn.plateform.dao.menu.MenuItemMapper.getSubMenuItemsByParentId")
            )
     })
-    List<MenuItem> getMenuItemsByUserId(String userId);
+    List<MenuItem> getMainsMenuItemsByUserId(String userId);
 
 
     /**
@@ -37,6 +37,6 @@ public interface MenuItemMapper {
      * @param parentId
      * @return
      */
-    @Select("select * from menu_item where parentId = #{parentId}")
-    List<MenuItem> getMenuItemsByParentId(String parentId);
+    @Select("select * from menu_item where menuType=2 and parentId = #{parentId}")
+    List<MenuItem> getSubMenuItemsByParentId(String parentId);
 }

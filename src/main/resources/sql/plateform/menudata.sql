@@ -20,6 +20,8 @@ CREATE TABLE IF NOT EXISTS menu_item(
    userId  INT  ,
    create_data DATE,
    update_data DATE,
+   imageclass VARCHAR (20),
+   menuType INT ,
    PRIMARY KEY (id)
 )  DEFAULT CHARSET=utf8;
 
@@ -27,15 +29,17 @@ COMMIT ;
 -- 添加数据
 
 -- 插入数据
-INSERT INTO menu_item (id, menuName , parentId,userId)
+INSERT INTO menu_item (id, menuName , parentId,userId,imageclass,menuType)
                        VALUES
-                       ('74862f5087f04118847f0fbf19f2ba3a' ,'首页', '0',2 );
+                       ('74862f5087f04118847f0fbf19f2ba3a' ,'首页', '0',2 ,'fa fa-home',1);
 
 COMMIT ;
 
-INSERT INTO menu_item (id, menuName , parentId,userId)
+INSERT INTO menu_item (id, menuName , parentId,userId,imageclass,menuType)
                        VALUES
-                       ('9e232206edf642d89c706e297e7d45d5' ,'图表', '74862f5087f04118847f0fbf19f2ba3a',2 );
+                       ('9e232206edf642d89c706e297e7d45d5' ,'图表', '74862f5087f04118847f0fbf19f2ba3a',2,'fa fa-adjust',2 );
+
+
 
 
 

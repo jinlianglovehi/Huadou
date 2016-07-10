@@ -30,7 +30,7 @@ public class TestMenuItem  extends BaseTest{
 
     @Override
     public void test() {
-        List<MenuItem> menuItems =  menuItemMapper.getMenuItemsByUserId("2");
+        List<MenuItem> menuItems =  menuItemMapper.getMainsMenuItemsByUserId("2");
 
         System.out.println("count:"+ menuItems.size());
         System.out.println(""+ menuItems.get(0).getMenuName());

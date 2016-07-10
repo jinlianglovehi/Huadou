@@ -56,8 +56,83 @@
     <!-- 此处可以可以配置成*.do，对应struts的后缀习惯 -->
     <url-pattern>/</url-pattern>
   </servlet-mapping>
+  
+  
+  <!--添加 druid 的声明  http://ip:port/druid/ -->
+
+  <servlet>
+    <servlet-name>DruidStatView</servlet-name>
+    <servlet-class>com.alibaba.druid.support.http.StatViewServlet</servlet-class>
+    <!--比较重要-->
+    <init-param>
+      <!-- 允许清空统计数据 -->
+      <param-name>resetEnable</param-name>
+      <param-value>false</param-value>
+    </init-param>
+    <init-param>
+      <!-- 用户名 -->
+      <param-name>loginUsername</param-name>
+      <param-value>jinlianglovehi</param-value>
+    </init-param>
+    <init-param>
+      <!-- 密码 -->
+      <param-name>loginPassword</param-name>
+      <param-value>371526azbyabcd</param-value>
+    </init-param>
+
+    <!--允许访问的ip-->
+    <init-param>
+      <param-name>allow</param-name>
+      <param-value>localhost</param-value>
+      <!--<param-value>128.242.127.1/24,128.242.128.1</param-value>-->
+    </init-param>
+    <!--拒绝访问的ip-->
+    <init-param>
+      <param-name>deny</param-name>
+      <param-value>128.242.127.4</param-value>
+    </init-param>
 
 
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>DruidStatView</servlet-name>
+    <url-pattern>/druid/*</url-pattern>
+  </servlet-mapping>
+
+  <!--druid session 监控-->
+  <filter>
+    <filter-name>DruidWebStatFilter</filter-name>
+    <filter-class>com.alibaba.druid.support.http.WebStatFilter</filter-class>
+    <init-param>
+      <!--排除这些格式文件-->
+      <param-name>exclusions</param-name>
+      <param-value>*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*</param-value>
+    </init-param>
+
+    <!--session 最大-->
+    <init-param>
+      <param-name>sessionStatMaxCount</param-name>
+      <param-value>3000</param-value>
+    </init-param>
+    <!--能够监控单个url调用的sql 列表-->
+    <init-param>
+      <param-name>profileEnable</param-name>
+      <param-value>true</param-value>
+    </init-param>
+    <!--配置session 用户是谁-->
+    <init-param>
+      <param-name>principalSessionName</param-name>
+      <param-value>userName</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>DruidWebStatFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+
+  <!--druid end-->
   <!--资源不必要格式的定义-->
   <servlet-mapping>
     <servlet-name>default</servlet-name>

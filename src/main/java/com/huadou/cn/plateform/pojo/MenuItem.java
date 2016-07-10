@@ -11,6 +11,16 @@ import java.util.StringTokenizer;
  *  菜单是tree 层级结构.
  */
 public class MenuItem {
+
+    /**
+     * 菜单常量定义
+     */
+    // 主菜单
+    public static  final int  MAIN_MENU = 1 ;
+    // 子菜单
+    public static  final int  SUB_MENU =2 ;
+
+
     private String id ;
 
     private String menuName ;// 菜单名称
@@ -20,8 +30,18 @@ public class MenuItem {
 
     private List<MenuItem> childMenus ; //子菜单
 
+    /**
+     * 创建时间
+     */
     private Date createData ;
+    /**
+     * 更新时间
+     */
     private Date updateData ;
+
+    // addtime  16/7/10 下午3:14
+    private String imageclass ;// 菜单前面携带的图标
+    private int  menuType ; // 区分主菜单还是子菜单
 
     public String getId() {
         return id;
@@ -77,5 +97,21 @@ public class MenuItem {
 
     public void setChildMenus(List<MenuItem> childMenus) {
         this.childMenus = childMenus;
+    }
+
+    public int getMenuType() {
+        return menuType;
+    }
+
+    public void setMenuType(int menuType) {
+        this.menuType = menuType;
+    }
+
+    public String getImageclass() {
+        return imageclass;
+    }
+
+    public void setImageclass(String imageclass) {
+        this.imageclass = imageclass;
     }
 }
