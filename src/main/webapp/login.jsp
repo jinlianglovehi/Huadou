@@ -12,7 +12,7 @@
     <div id="wrapper">
         <div id="login" class="animate form " style="float: right">
             <section class="login_content">
-                <form action="user/login.do" method="post">
+                <form action="user/login" method="post">
                     <h1> Login </h1>
                     <div>
                         <input type="text" class="form-control" placeholder="Username" required="" />

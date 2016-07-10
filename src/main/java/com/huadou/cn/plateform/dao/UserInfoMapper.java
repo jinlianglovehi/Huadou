@@ -11,7 +11,7 @@ import java.util.List;
 public interface UserInfoMapper {
 
     @Select(" select * from user_info ")
-    List<User> getUser();
+    List<User> getAllUser();
 
 
 

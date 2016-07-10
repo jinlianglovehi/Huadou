@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2282831601">
+  <component name="DataSourceManagerImpl" format="xml" hash="3276662159">
     <data-source source="LOCAL" name="MySQL - huadou@localhost" uuid="4ea595db-e72f-4409-9e52-46b4bc8aa424">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
@@ -19,6 +19,7 @@
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://112.74.83.167:3306/huadou</jdbc-url>
+      <default-dialect>MySQL</default-dialect>
       <driver-properties>
         <property name="zeroDateTimeBehavior" value="convertToNull" />
         <property name="tinyInt1isBit" value="false" />

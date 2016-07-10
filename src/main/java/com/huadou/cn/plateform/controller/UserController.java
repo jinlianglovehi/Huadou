@@ -9,6 +9,7 @@ import com.huadou.cn.plateform.pojo.RequestBean;
 import com.huadou.cn.plateform.pojo.User;
 import com.huadou.cn.plateform.service.IUserService;
 import com.huadou.cn.utils.GsonUtils;
+import com.huadou.cn.utils.Utils;
 import org.springframework.beans.propertyeditors.StringArrayPropertyEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -92,7 +93,7 @@ public class UserController {
 	@ResponseBody
 	@RequestMapping(value = "getUserInfo",method = RequestMethod.GET)
 	public String getUserInfo(){
-	    List<User> list =	userInfoMapper.getUser();
+	    List<User> list =	userInfoMapper.getAllUser();
 		String result = GsonUtils.getInstance().toJson(list);
 		return  result ;
 
@@ -103,9 +104,10 @@ public class UserController {
 	@RequestMapping(value = "/login",method = RequestMethod.POST)
 	public String loginAction(@ModelAttribute("user") User user ){
 
-
-
-		return "index";
+		if(Utils.isDebug){
+		    System.out.println("loginAction-"+ user.getUsername() + ",password:"+ user.getPassword());
+		}
+		return "redirect:/menu/getmenus/2";
 
 	}
 

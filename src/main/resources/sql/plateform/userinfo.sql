@@ -1,5 +1,5 @@
 create table user_info(
-   id INT NOT NULL  AUTO_INCREMENT,
+   id VARCHAR(20) NOT NULL  ,
    username VARCHAR(100) NOT NULL,
    password VARCHAR (20)not NULL ,
    age  INT  ,
@@ -7,4 +7,4 @@ create table user_info(
    create_data DATE,
    update_data DATE,
    PRIMARY KEY (id)
-);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;

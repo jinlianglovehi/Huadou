@@ -12,34 +12,51 @@
     <database-model serializer="dbm" rdbms="MYSQL" format-version="2.4">
       <schema id="1" name="huadou"/>
       <table id="2" parent="1" name="user_info"/>
-      <column id="3" parent="2" name="id">
+      <table id="3" parent="1" name="menu_item"/>
+      <column id="4" parent="2" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="4" parent="2" name="username">
+      <column id="5" parent="2" name="username">
         <mandatory>1</mandatory>
         <data-type>varchar(100)</data-type>
       </column>
-      <column id="5" parent="2" name="password">
+      <column id="6" parent="2" name="password">
         <mandatory>1</mandatory>
         <data-type>varchar(20)</data-type>
       </column>
-      <column id="6" parent="2" name="age">
+      <column id="7" parent="2" name="age">
         <data-type>int(11)</data-type>
       </column>
-      <column id="7" parent="2" name="phonenumber">
+      <column id="8" parent="2" name="phonenumber">
         <data-type>varchar(25)</data-type>
       </column>
-      <column id="8" parent="2" name="create_data">
+      <column id="9" parent="2" name="create_data">
         <data-type>date</data-type>
       </column>
-      <column id="9" parent="2" name="update_data">
+      <column id="10" parent="2" name="update_data">
         <data-type>date</data-type>
       </column>
-      <key id="10" parent="2" name="PRIMARY">
-        <columns>id</columns>
-        <primary>1</primary>
-      </key>
+      <column id="11" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="12" parent="3" name="menuName">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="13" parent="3" name="parentId">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="14" parent="3" name="userId">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="15" parent="3" name="create_data">
+        <data-type>date</data-type>
+      </column>
+      <column id="16" parent="3" name="update_data">
+        <data-type>date</data-type>
+      </column>
     </database-model>
   </data-source>
 </component>

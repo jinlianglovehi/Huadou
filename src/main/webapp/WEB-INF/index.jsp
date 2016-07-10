@@ -54,6 +54,17 @@
               <ul class="nav side-menu">
 
                 <!-- 左侧的一级菜单和二级菜单 -->
+              <c:forEach var="menu" items="${menuitems}">
+                  <%--用EL表达式直接调用属性循环输出对象的各个属性值--%>
+                  <li><a><i class="fa fa-home"></i> ${menu.menuName} <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu" style="display: none">
+                      <c:forEach var="submenu" items="${menu.childMenus}">
+                        <li><a href="#">${submenu.menuName}</a></li>
+                      </c:forEach>
+                    </ul>
+                  </li>
+                </c:forEach>
+
                 <%--下面的布局内容是一样的--%>
                 <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu" style="display: none">
