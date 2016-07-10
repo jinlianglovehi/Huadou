@@ -37,6 +37,16 @@ $(function () {
             if ($('#sidebar-menu li').hasClass('active')) {
                 $('#sidebar-menu li.active').addClass('active-sm').removeClass('active');
             }
+
+           // $('#mainFrame_id').find("body").removeClass('nav-md').addClass('nav-sm');
+           //alert( "10:"+$("mainFrame").contents().find("body").html());
+
+            //window.frames["mainFrame"].document.getElementsByTagName("body").innerHTML= "http://hi.wonsoft.cn ";
+
+            var x=document.getElementById("mainFrame");
+            var y=(x.contentWindow || x.contentDocument);
+            if (y.document)y=y.document;
+            y.body.className='nav-sm' ;
         } else {
             $('body').removeClass('nav-sm').addClass('nav-md');
             $('.sidebar-footer').show();
@@ -44,6 +54,16 @@ $(function () {
             if ($('#sidebar-menu li').hasClass('active-sm')) {
                 $('#sidebar-menu li.active-sm').addClass('active').removeClass('active-sm');
             }
+            //$('mainFrame').contents().find("body").removeClass('nav-sm').addClass('nav-md');
+            //var deptObjs= document.getElementById("mainFrame_id").contentWindow.document.getElementsByTagName("body");
+            //deptObjs.className = 'nav-md';
+            //window.frames["mainFrame"].document.getElementsByTagName("body").innerHTML= " ";
+
+            var x=document.getElementById("mainFrame");
+            var y=(x.contentWindow || x.contentDocument);
+            if (y.document)y=y.document;
+            y.body.className='nav-md' ;
+
         }
     });
 });

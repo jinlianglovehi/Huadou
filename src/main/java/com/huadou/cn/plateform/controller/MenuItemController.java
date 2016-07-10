@@ -28,19 +28,29 @@ public class MenuItemController {
 
     @RequestMapping(value = "/getmenus/{userId}",method = RequestMethod.GET)
     public String getMenuItems(@PathVariable( "userId" ) String userId,ModelMap model){
-
-
         if(Utils.isDebug){
             System.out.println("[16/7/10 下午4:02]getMenuItems,userId:"+userId);
         }
-
        List<MenuItem>  menuItems = menuItemMapper.getMainsMenuItemsByUserId(userId);
        if(Utils.isDebug){
            System.out.println("getMenuItems:"+ menuItems.size());
        }
         model.put("menuitems",menuItems);
         return  "index" ;
+    }
 
+    /**
+     * 根据 菜单定义的url 跳转到右侧内容
+     */
+
+    @RequestMapping(value = "/frame/{name}",method = RequestMethod.GET)
+    public String getMenuFrameByName(@PathVariable( "name" ) String name){
+
+        if(Utils.isDebug){
+            System.out.println("[16/7/10 下午6:24]getMenuFrameByName,name:"+ name);
+        }
+
+        return "jsp/right/"+name ;
     }
 
 

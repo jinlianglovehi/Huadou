@@ -157,8 +157,8 @@ body.nav-sm span.fa, body.nav-sm .menu_section h3 {
   /*background: #F4F6F9;
     border-bottom: 1px solid #E6E9ED;*/
   background: #EDEDED;
-  border-bottom: 1px solid #D9DEE4;
-  margin-bottom: 10px;
+  border-bottom: 0.1px solid #D9DEE4;
+  margin-bottom: 0px;
   width: 100%;
 }
 body.nav-md .container.body .col-md-3.left_col {
@@ -1520,6 +1520,7 @@ span.right {
 }
 .tile_stats_count .right {
   padding-left: 10px;
+  /* 调试主界面时候去掉的*/
   height: 100%;
   text-overflow: ellipsis;
   overflow: hidden;

@@ -43,6 +43,8 @@ public class MenuItem {
     private String imageclass ;// 菜单前面携带的图标
     private int  menuType ; // 区分主菜单还是子菜单
 
+
+
     public String getId() {
         return id;
     }
