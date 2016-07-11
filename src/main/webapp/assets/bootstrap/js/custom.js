@@ -43,7 +43,7 @@ $(function () {
 
             //window.frames["mainFrame"].document.getElementsByTagName("body").innerHTML= "http://hi.wonsoft.cn ";
 
-            var x=document.getElementById("mainFrame");
+            var x=document.getElementById("mainFrame_id");
             var y=(x.contentWindow || x.contentDocument);
             if (y.document)y=y.document;
             y.body.className='nav-sm' ;
@@ -59,7 +59,7 @@ $(function () {
             //deptObjs.className = 'nav-md';
             //window.frames["mainFrame"].document.getElementsByTagName("body").innerHTML= " ";
 
-            var x=document.getElementById("mainFrame");
+            var x=document.getElementById("mainFrame_id");
             var y=(x.contentWindow || x.contentDocument);
             if (y.document)y=y.document;
             y.body.className='nav-md' ;

@@ -37,26 +37,44 @@
       <column id="10" parent="2" name="update_data">
         <data-type>date</data-type>
       </column>
-      <column id="11" parent="3" name="id">
+      <key id="11" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="12" parent="3" name="id">
         <mandatory>1</mandatory>
-        <data-type>int(11)</data-type>
+        <data-type>varchar(40)</data-type>
       </column>
-      <column id="12" parent="3" name="menuName">
+      <column id="13" parent="3" name="menuName">
         <mandatory>1</mandatory>
         <data-type>varchar(20)</data-type>
       </column>
-      <column id="13" parent="3" name="parentId">
+      <column id="14" parent="3" name="parentId">
+        <data-type>varchar(40)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="15" parent="3" name="userId">
         <data-type>int(11)</data-type>
       </column>
-      <column id="14" parent="3" name="userId">
+      <column id="16" parent="3" name="create_data">
+        <data-type>date</data-type>
+      </column>
+      <column id="17" parent="3" name="update_data">
+        <data-type>date</data-type>
+      </column>
+      <column id="18" parent="3" name="imageclass">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="19" parent="3" name="menuType">
         <data-type>int(11)</data-type>
       </column>
-      <column id="15" parent="3" name="create_data">
-        <data-type>date</data-type>
+      <column id="20" parent="3" name="url">
+        <data-type>varchar(30)</data-type>
       </column>
-      <column id="16" parent="3" name="update_data">
-        <data-type>date</data-type>
-      </column>
+      <key id="21" parent="3" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
     </database-model>
   </data-source>
 </component>

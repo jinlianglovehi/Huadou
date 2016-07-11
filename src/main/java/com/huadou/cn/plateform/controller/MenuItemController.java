@@ -50,7 +50,7 @@ public class MenuItemController {
             System.out.println("[16/7/10 下午6:24]getMenuFrameByName,name:"+ name);
         }
 
-        return "jsp/right/"+name ;
+        return "jsp/menu/frame/"+name ;
     }
 
 

@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: jinliang
-  Date: 16/7/10
-  Time: 下午6:04
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -16,9 +10,16 @@
         body .container.body .right_col {
             background: #f7f7f7 none repeat scroll 0 0;
         }
+        body {
+           margin: 0;
+            padding:0;
+            overflow-y: scroll;
+
+        }
 
         .tile_stats_count .right {
-            height:;
+            height:auto;
+            max-height: 85px;
         }
     </style>
 </head>
@@ -27,13 +28,12 @@
 <body class="nav-md">
 
 <div class="container body">
-
-
     <div class="right_col" role="main">
 
         <!-- top tiles -->
         <div class="row tile_count">
-            <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
+            <%--flipInY--%>
+            <div class="animated huhu col-md-2 col-sm-4 col-xs-4 tile_stats_count">
                 <div class="left"></div>
                 <div class="right">
                     <span class="count_top"><i class="fa fa-user"></i> Total Users</span>
@@ -41,7 +41,7 @@
                     <span class="count_bottom"><i class="green">4% </i> From last Week</span>
                 </div>
             </div>
-            <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
+            <div class="animated huhu col-md-2 col-sm-4 col-xs-4 tile_stats_count">
                 <div class="left"></div>
                 <div class="right">
                     <span class="count_top"><i class="fa fa-clock-o"></i> Average Time</span>
@@ -49,7 +49,7 @@
                     <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span>
                 </div>
             </div>
-            <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
+            <div class="animated huhu col-md-2 col-sm-4 col-xs-4 tile_stats_count">
                 <div class="left"></div>
                 <div class="right">
                     <span class="count_top"><i class="fa fa-user"></i> Total Males</span>
@@ -57,7 +57,7 @@
                     <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
                 </div>
             </div>
-            <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
+            <div class="animated huhu col-md-2 col-sm-4 col-xs-4 tile_stats_count">
                 <div class="left"></div>
                 <div class="right">
                     <span class="count_top"><i class="fa fa-user"></i> Total Females</span>
@@ -65,7 +65,7 @@
                     <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span>
                 </div>
             </div>
-            <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
+            <div class="animated huhu col-md-2 col-sm-4 col-xs-4 tile_stats_count">
                 <div class="left"></div>
                 <div class="right">
                     <span class="count_top"><i class="fa fa-user"></i> Total Collections</span>
@@ -73,7 +73,7 @@
                     <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
                 </div>
             </div>
-            <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
+            <div class="animated huhu col-md-2 col-sm-4 col-xs-4 tile_stats_count">
                 <div class="left"></div>
                 <div class="right">
                     <span class="count_top"><i class="fa fa-user"></i> Total Connections</span>
@@ -83,8 +83,11 @@
             </div>
 
         </div>
-        <!-- /top tiles -->
+    <!-- /top tiles -->
 
+        <br />
+
+        <%--start--%>
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="dashboard_graph">
@@ -158,7 +161,9 @@
 
         </div>
         <br />
+        <%--end--%>
 
+        <%--row start --%>
         <div class="row">
 
 
@@ -407,6 +412,8 @@
 
         </div>
 
+
+    <%--row end--%>
 
         <div class="row">
             <div class="col-md-4 col-sm-4 col-xs-12">
@@ -769,6 +776,7 @@
             </div>
 
         </div>
+
 
 
         <!-- footer content -->

@@ -39,10 +39,9 @@ public class MenuItem {
      */
     private Date updateData ;
 
-    // addtime  16/7/10 下午3:14
     private String imageclass ;// 菜单前面携带的图标
     private int  menuType ; // 区分主菜单还是子菜单
-
+    private String url ;// 连接左侧菜单
 
 
     public String getId() {
@@ -115,5 +114,13 @@ public class MenuItem {
 
     public void setImageclass(String imageclass) {
         this.imageclass = imageclass;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }

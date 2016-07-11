@@ -11,11 +11,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>小豆科技</title>
   <jsp:include page="${pageContext.request.contextPath}/WEB-INF/head.jsp"/>
+
+
+    <script>
+        function navigate(url)
+        {
+            window.frames['mainFrame'].location = url;
+        }
+    </script>
+
+
 </head>
-<body class="nav-md">
+<body class="nav-md"  style="overflow-y: hidden;overflow-x: hidden">
 
 <div class="container body">
-  <div class="main_container">
+  <div class="main_container" >
     <div class="col-md-3 left_col">
       <div class="left_col scroll-view">
 
@@ -52,7 +62,7 @@
                 <li><a><i class="${menu.imageclass}"></i> ${menu.menuName} <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu" style="display: none">
                     <c:forEach var="submenu" items="${menu.childMenus}">
-                      <li><a href="#">
+                      <li><a  onclick="navigate('${submenu.url}')"   >
                           <%--<i class="${submenu.imageclass}"></i>--%>
                           ${submenu.menuName}</a>
                       </li>
@@ -200,22 +210,55 @@
     </div>
     <!-- /top navigation -->
 
-    <iframe src="/menu/frame/home"  id="mainFrame"
+    <iframe src="/menu/frame/pager_home"  id="mainFrame_id"
             name="mainFrame"
             marginheight="0" marginwidth="0"
             <%--height="600px" --%>
-            scrolling=no
+            scrolling="yes"
             width="100%"
-            framespacing="0" frameborder="0"  onLoad="iFrameHeight()"
+            framespacing="0" frameborder="0"  onLoad="iFrameHeightEnd()"
     ></iframe>
 
       <script type="text/javascript" language="javascript">
           function iFrameHeight() {
-              var ifm= document.getElementById("mainFrame");
-              var subWeb = document.frames ? document.frames["mainFrame"].document : ifm.contentDocument;
-              if(ifm != null && subWeb != null) {
-                  ifm.height = subWeb.body.scrollHeight;
+              var ifm= document.getElementById("mainFrame_id");
+              var subWeb = document.frames ? document.frames["mainFrame_id"].document : ifm.contentDocument;
+              //获取窗口高度
+              var  winHeight = 0 ;
+              if (window.innerHeight){
+                  winHeight = window.innerHeight;
+              }else if ((document.body) && (document.body.clientHeight)){
+                  winHeight = document.body.clientHeight;
               }
+
+              if(ifm != null && subWeb != null) {
+                  //scrollHeight
+                  if(subWeb.body.clientHeight< winHeight ){
+                      ifm.height = winHeight;
+                  }else{
+                      ifm.height = subWeb.body.clientHeight;
+                  }
+
+              }
+
+              // 设置样式
+
+              var x=document.getElementById("mainFrame_id");
+              var y=(x.contentWindow || x.contentDocument);
+              if (y.document)y=y.document;
+              if ($('body').hasClass('nav-md')) {
+                  y.body.className='nav-md' ;
+              }else{
+                  y.body.className='nav-sm' ;
+              }
+
+          }
+
+          var timer1 = window.setInterval("iFrameHeight()", 500); //定时开始
+          function iFrameHeightEnd(){
+                iFrameHeight();
+               window.clearInterval(timer1);
+
           }
       </script>
 
