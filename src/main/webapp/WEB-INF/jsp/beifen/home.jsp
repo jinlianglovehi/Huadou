@@ -1,4 +1,10 @@
-
+<%--
+  Created by IntelliJ IDEA.
+  User: jinliang
+  Date: 16/7/10
+  Time: 下午6:04
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -10,15 +16,9 @@
         body .container.body .right_col {
             background: #f7f7f7 none repeat scroll 0 0;
         }
-        body {
-           margin: 0;
-            padding:0;
-
-        }
 
         .tile_stats_count .right {
-            height:auto;
-            max-height: 85px;
+            height:;
         }
     </style>
 </head>
@@ -27,6 +27,8 @@
 <body class="nav-md">
 
 <div class="container body">
+
+
     <div class="right_col" role="main">
 
         <!-- top tiles -->
@@ -81,11 +83,8 @@
             </div>
 
         </div>
-    <!-- /top tiles -->
+        <!-- /top tiles -->
 
-        <br />
-
-        <%--start--%>
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="dashboard_graph">
@@ -159,9 +158,7 @@
 
         </div>
         <br />
-        <%--end--%>
 
-        <%--row start --%>
         <div class="row">
 
 
@@ -410,8 +407,6 @@
 
         </div>
 
-
-    <%--row end--%>
 
         <div class="row">
             <div class="col-md-4 col-sm-4 col-xs-12">
@@ -774,7 +769,6 @@
             </div>
 
         </div>
-
 
 
         <!-- footer content -->

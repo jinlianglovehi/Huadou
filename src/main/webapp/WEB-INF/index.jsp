@@ -9,20 +9,13 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>小豆科技</title>
   <jsp:include page="${pageContext.request.contextPath}/WEB-INF/head.jsp"/>
-  <%--<jsp:include page="../WEB-INF/head.jsp"/>--%>
 </head>
-
-
 <body class="nav-md">
 
 <div class="container body">
-
-
   <div class="main_container">
-
     <div class="col-md-3 left_col">
       <div class="left_col scroll-view">
 
@@ -210,7 +203,7 @@
     <iframe src="/menu/frame/home"  id="mainFrame"
             name="mainFrame"
             marginheight="0" marginwidth="0" height="600px" width="100%"
-
+            framespacing="0" frameborder="0"
     ></iframe>
 
 
