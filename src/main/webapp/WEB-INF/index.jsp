@@ -202,21 +202,22 @@
 
     <iframe src="/menu/frame/home"  id="mainFrame"
             name="mainFrame"
-            marginheight="0" marginwidth="0" height="600px" width="100%"
-            framespacing="0" frameborder="0"
+            marginheight="0" marginwidth="0"
+            <%--height="600px" --%>
+            scrolling=no
+            width="100%"
+            framespacing="0" frameborder="0"  onLoad="iFrameHeight()"
     ></iframe>
 
-
-    <script type="text/javascript" language="javascript">
-      function iFrameHeight() {
-        var ifm= document.getElementById("iframepage");
-        var subWeb = document.frames ? document.frames["iframepage"].document : ifm.contentDocument;
-        if(ifm != null && subWeb != null) {
-          ifm.height = subWeb.body.scrollHeight;
-          ifm.width = subWeb.body.scrollWidth;
-        }
-      }
-    </script>
+      <script type="text/javascript" language="javascript">
+          function iFrameHeight() {
+              var ifm= document.getElementById("mainFrame");
+              var subWeb = document.frames ? document.frames["mainFrame"].document : ifm.contentDocument;
+              if(ifm != null && subWeb != null) {
+                  ifm.height = subWeb.body.scrollHeight;
+              }
+          }
+      </script>
 
 
   </div>
