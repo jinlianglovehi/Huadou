@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -27,7 +28,7 @@ public class MenuItemController {
     private MenuItemMapper menuItemMapper;
 
     @RequestMapping(value = "/getmenus/{userId}",method = RequestMethod.GET)
-    public String getMenuItems(@PathVariable( "userId" ) String userId,ModelMap model){
+    public ModelAndView getMenuItems(@PathVariable( "userId" ) String userId,ModelMap model){
         if(Utils.isDebug){
             System.out.println("[16/7/10 下午4:02]getMenuItems,userId:"+userId);
         }
@@ -35,8 +36,9 @@ public class MenuItemController {
        if(Utils.isDebug){
            System.out.println("getMenuItems:"+ menuItems.size());
        }
-        model.put("menuitems",menuItems);
-        return  "index" ;
+        ModelAndView modelAndView = new ModelAndView("index");
+        modelAndView.addObject("menuitems",menuItems);
+        return  modelAndView ;
     }
 
     /**
@@ -44,13 +46,27 @@ public class MenuItemController {
      */
 
     @RequestMapping(value = "/frame/{name}",method = RequestMethod.GET)
-    public String getMenuFrameByName(@PathVariable( "name" ) String name){
+    public ModelAndView getMenuFrameByName(@PathVariable( "name" ) String name){
 
         if(Utils.isDebug){
             System.out.println("[16/7/10 下午6:24]getMenuFrameByName,name:"+ name);
         }
 
-        return "jsp/menu/frame/"+name ;
+        ///menu/frame/pager_home
+
+        ModelAndView modelAndView = new ModelAndView("jsp/menu/frame/"+name);
+        return modelAndView  ;
+    }
+
+    @RequestMapping(value = "/md/{id}",method = RequestMethod.GET)
+    public ModelAndView getMdMenuEdit(@PathVariable("id") String id){
+
+        if(Utils.isDebug){
+            System.out.println("[16/7/12 下午11:22]getMdMenuEdit");
+        }
+        
+        ModelAndView modelAndView = new ModelAndView("jsp/markmd/md_page_edit");
+        return modelAndView;
     }
 
 

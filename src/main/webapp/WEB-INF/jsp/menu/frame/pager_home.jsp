@@ -1,13 +1,13 @@
-
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
     <title>Title</title>
     <%--<jsp:include page="../WEB-INF/head.jsp"/>--%>
-    <jsp:include page="${pageContext.request.contextPath}/WEB-INF/head.jsp"/>
+    <jsp:include page="../../../head.jsp"/>
     <style>
 
-        body .container.body .right_col {
+        body, .container.body  {
             background: #f7f7f7 none repeat scroll 0 0;
         }
         body {
@@ -28,7 +28,7 @@
 <body class="nav-md">
 
 <div class="container body">
-    <div class="right_col" role="main">
+    <div  role="main">
 
         <!-- top tiles -->
         <div class="row tile_count">

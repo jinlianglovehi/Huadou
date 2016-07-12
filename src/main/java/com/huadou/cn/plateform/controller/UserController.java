@@ -82,10 +82,10 @@ public class UserController {
 			 RequestBean requestBean, BindingResult result, ModelMap model
 			) {
 
-
-
+       if(Utils.isDebug){
+           System.out.println("[16/7/12 下午11:23]setupForm");
+       }
 		System.out.println("UserController item:"+requestBean.getItem()+ ",cardId:"+requestBean.getCard_id() +",security_code:" +requestBean.getSecurity_code()+",record:"+requestBean.getRecord() +",oemr_items:"+requestBean.getOemr_items());
-
 		return  "huhu";
 	}
 
@@ -93,6 +93,10 @@ public class UserController {
 	@ResponseBody
 	@RequestMapping(value = "getUserInfo",method = RequestMethod.GET)
 	public String getUserInfo(){
+		if(Utils.isDebug){
+		    System.out.println("[16/7/12 下午11:23]getUserInfo");
+		}
+		
 	    List<User> list =	userInfoMapper.getAllUser();
 		String result = GsonUtils.getInstance().toJson(list);
 		return  result ;

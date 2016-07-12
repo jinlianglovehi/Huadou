@@ -1,5 +1,6 @@
 
-
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <!-- Custom styling plus plugins -->
 <link href="assets/bootstrap/css/custom.css" rel="stylesheet">
