@@ -28,7 +28,7 @@ public class MenuItemController {
     private MenuItemMapper menuItemMapper;
 
     @RequestMapping(value = "/getmenus/{userId}",method = RequestMethod.GET)
-    public ModelAndView getMenuItems(@PathVariable( "userId" ) String userId,ModelMap model){
+    public ModelAndView getMenuItems(@PathVariable( "userId" ) String userId){
         if(Utils.isDebug){
             System.out.println("[16/7/10 下午4:02]getMenuItems,userId:"+userId);
         }

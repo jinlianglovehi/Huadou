@@ -2,7 +2,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <!-- Meta, title, CSS, favicons, etc. -->
@@ -139,7 +138,7 @@
                 <li>
                   <a>
                       <span class="image">
-                                        <img src="images/img.jpg" alt="Profile Image" />
+                                        <img src="${pageContext.request.contextPath}/assets/bootstrap/images/img.jpg" alt="Profile Image" />
                                     </span>
                       <span>
                                         <span>John Smith</span>
@@ -153,7 +152,7 @@
                 <li>
                   <a>
                       <span class="image">
-                                        <img src="images/img.jpg" alt="Profile Image" />
+                                        <img src="${pageContext.request.contextPath}/assets/bootstrap/images/img.jpg" alt="Profile Image" />
                                     </span>
                       <span>
                                         <span>John Smith</span>
@@ -167,7 +166,7 @@
                 <li>
                   <a>
                       <span class="image">
-                                        <img src="images/img.jpg" alt="Profile Image" />
+                                        <img src="${pageContext.request.contextPath}/assets/bootstrap/images/img.jpg" alt="Profile Image" />
                                     </span>
                       <span>
                                         <span>John Smith</span>
@@ -181,7 +180,7 @@
                 <li>
                   <a>
                       <span class="image">
-                                        <img src="images/img.jpg" alt="Profile Image" />
+                                        <img src="${pageContext.request.contextPath}/assets/bootstrap/images/img.jpg" alt="Profile Image" />
                       </span>
                       <span>
                         <span>John Smith</span>
@@ -210,16 +209,15 @@
     </div>
     <!-- /top navigation -->
     <div class="right_col" role="main">
+        <iframe src="/menu/frame/pager_home"  id="mainFrame_id"
+                name="mainFrame"
+                marginheight="0" marginwidth="0"
+                <%--height="600px" --%>
+                scrolling="yes"
+                width="100%"
+                framespacing="0" frameborder="0"  onLoad="iFrameHeightEnd()"></iframe>
 
-    <iframe src="/menu/frame/pager_home"  id="mainFrame_id"
-            name="mainFrame"
-            marginheight="0" marginwidth="0"
-            <%--height="600px" --%>
-
-            scrolling="yes"
-            width="100%"
-            framespacing="0" frameborder="0"  onLoad="iFrameHeightEnd()"
-    ></iframe>
+    </div>
 
       <script type="text/javascript" language="javascript">
           function iFrameHeight() {
@@ -264,7 +262,6 @@
           }
       </script>
 
-    </div>
 
   </div>
 

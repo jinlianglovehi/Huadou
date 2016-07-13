@@ -83,7 +83,7 @@
     <!--允许访问的ip-->
     <init-param>
       <param-name>allow</param-name>
-      <param-value>localhost</param-value>
+      <param-value>localhost,112.74.83.167</param-value>
       <!--<param-value>128.242.127.1/24,128.242.128.1</param-value>-->
     </init-param>
     <!--拒绝访问的ip-->
